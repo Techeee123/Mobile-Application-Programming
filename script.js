@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // function calculateSum() {
 //     let a = 10;
 //     let b = 20;
@@ -17,3 +18,12 @@ function addNumbers(){
 
 
 
+=======
+function calculateSum() {
+    let a = 10;
+    let b = 20;
+    let c = a + b;
+
+    document.getElementById("result").textContent = c;
+}
+>>>>>>> d1671b98390ceb1e9c0bed01da1b382bef77df45
