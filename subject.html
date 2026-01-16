@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Result Calculate</title>
+</head>
+<body>
+
+<h2>Enter Marks of 8 Subjects</h2>
+
+<input type="number" class="marks"><br><br>
+<input type="number" class="marks"><br><br>
+<input type="number" class="marks"><br><br>
+<input type="number" class="marks"><br><br>
+<input type="number" class="marks"><br><br>
+<input type="number" class="marks"><br><br>
+<input type="number" class="marks"><br><br>
+<input type="number" class="marks"><br><br>
+
+<button onclick="calculateResult()">Calculate Result</button>
+
+<p id="result"></p>
+
+<script>
+function calculateResult() {
+    let marks = document.getElementsByClassName("marks");
+    let total = 0;
+
+    for (let i = 0; i < marks.length; i++) {
+        total += Number(marks[i].value);
+    }
+
+    let resultText = "";
+    let color = "";
+
+    if (total > 700) {
+        resultText = "Distinction";
+        color = "green";
+    } 
+    else if (total >= 600) {
+        resultText = "First Division";
+        color = "blue";
+    } 
+    else if (total >= 400) {
+        resultText = "Second Division";
+        color = "orange";
+    } 
+    else {
+        resultText = "Failed";
+        color = "red";
+    }
+
+    let resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = "Total Marks: " + total + "<br>" + resultText;
+    resultDiv.style.color = color;
+}
+</script>
+
+</body>
+</html>
