@@ -49,8 +49,8 @@ function calculateResult() {
     }
 
     let resultDiv = document.getElementById("result");
-    resultDiv.innerHTML = "Total Marks: " + total + "<br>" + resultText;
-    resultDiv.style.color = color;
+    resultDiv.innerHTML = "Total Marks: " + total + "<br>" +
+    "<span style='color:" + color + "'>" + resultText + "</span>";
 }
 </script>
 

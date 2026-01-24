@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Web Page Demo</title>
+
+    <!-- Mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            padding: 15px;
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* 📱 Media Query for Mobile Screens */
+        @media screen and (max-width: 600px) {
+            header {
+                font-size: 18px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+        /* 💻 Media Query for Larger Screens */
+        @media screen and (min-width: 601px) {
+            .container {
+                width: 60%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Mobile Web Page</h2>
+    <p>Using HTML, CSS, jQuery & Media Queries</p>
+</header>
+
+<div class="container">
+    <button id="toggleBtn">Show More</button>
+
+    <div class="content">
+        <h3>Welcome!</h3>
+        <p>
+            This is a mobile-friendly webpage created using HTML, CSS, and jQuery.
+            It includes simple animations and responsive design using media queries.
+        </p>
+    </div>
+</div>
+
+<footer>
+    © 2026 Mobile Web Demo
+</footer>
+
+<script>
+$(document).ready(function () {
+
+    $("#toggleBtn").click(function () {
+
+        if ($(".content").is(":visible")) {
+            $(".content").slideUp(500);
+            $(this).text("Show More");
+        } else {
+            $(".content").slideDown(500);
+            $(this).text("Show Less");
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
